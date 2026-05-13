@@ -76,7 +76,7 @@ function XIcon({ className }: { className?: string }) {
 
 function HeroPhoto() {
   return (
-    <aside className="relative mx-auto mt-6 w-full max-w-sm lg:mt-0 lg:max-w-none">
+    <aside className="relative mx-auto mt-6 w-full max-w-[300px] lg:mt-0 lg:max-w-none">
       <div className="pointer-events-none absolute -inset-6 rounded-[2rem] bg-cyan-400/10 blur-3xl dark:bg-white/[0.06]" />
       <div className="relative overflow-hidden rounded-[1.75rem] border border-zinc-200/90 bg-white/75 p-2 shadow-[0_24px_80px_rgba(15,23,42,0.12)] backdrop-blur dark:border-zinc-600 dark:bg-zinc-900/80 dark:shadow-[0_24px_90px_rgba(0,0,0,0.28)]">
         <div
@@ -98,7 +98,7 @@ export default function PortfolioPage() {
     <div className="min-h-screen text-zinc-900 dark:text-zinc-100 antialiased">
       <ScrollHeader />
 
-      <main className="mx-auto max-w-7xl space-y-28 px-6 pt-4 pb-16 md:pt-10 md:pb-14">
+      <main className="mx-auto max-w-7xl space-y-28 px-6 pt-12 pb-16 md:pt-20 md:pb-14">
         {/* HERO */}
         <section
           id="about"
@@ -120,8 +120,7 @@ export default function PortfolioPage() {
               </div>
 
               <h1 className="max-w-3xl pt-2 text-3xl font-bold tracking-tighter leading-[1.1] text-zinc-950 dark:text-white sm:text-4xl md:text-5xl">
-                Bridging the gap between advanced machine learning models and intuitive
-                user interfaces.
+                Building intuitive interfaces for powerful AI systems
               </h1>
 
               
@@ -165,10 +164,7 @@ export default function PortfolioPage() {
                 at the University Level Avishkar Competition.
               </p>
               <p className="text-sm font-normal leading-relaxed text-zinc-500">
-                I thrive in environments where I can build end-to-end applications and
-                apply cutting-edge AI to solve real-world problems. My workflow pairs
-                custom machine learning methodologies with robust front-end web
-                paradigms.
+                I thrive in developing end-to-end products that merge advanced AI with seamless user experiences.
               </p>
             </div>
           </div>
