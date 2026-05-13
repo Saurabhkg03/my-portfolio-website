@@ -33,20 +33,13 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: "Saurabh Gaikwad",
     type: "website",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Saurabh Gaikwad portfolio preview",
-      },
-    ],
+    // NOTE: The manual 'images' array was deleted here!
   },
   twitter: {
     card: "summary_large_image",
     title: defaultTitle,
     description: defaultDescription,
-    images: ["/og-image.jpg"],
+    // NOTE: The manual 'images' array was deleted here too!
   },
 };
 
