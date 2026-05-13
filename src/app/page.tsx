@@ -99,7 +99,7 @@ export default function PortfolioPage() {
     <div className="min-h-screen text-zinc-900 dark:text-zinc-100 antialiased">
       <ScrollHeader />
 
-      <main className="mx-auto max-w-7xl space-y-28 px-6 py-16 md:py-14">
+      <main className="mx-auto max-w-7xl space-y-28 px-6 pt-4 pb-16 md:pt-10 md:pb-14">
         {/* HERO */}
         <section
           id="about"
@@ -248,7 +248,7 @@ export default function PortfolioPage() {
               03 / Featured Work
             </h3>
             <span className="text-xs font-medium uppercase tracking-tight text-zinc-500 dark:text-zinc-400">
-                Production Implementations
+                Projects
             </span>
           </div>
           <BentoGrid>
@@ -273,6 +273,16 @@ export default function PortfolioPage() {
                       AI-driven content generation using Python scripts to automate study
                       material creation. Managed the entire SDLC.
                     </p>
+                    <div className="flex flex-wrap items-center gap-3 pt-3">
+                      <a href="https://github.com/Saurabhkg03/saraav" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-medium text-zinc-700 shadow-sm transition-colors hover:border-cyan-200 hover:bg-cyan-50 hover:text-cyan-700 dark:border-zinc-800 dark:bg-zinc-950/50 dark:text-zinc-300 dark:hover:border-cyan-900/50 dark:hover:bg-cyan-950/30 dark:hover:text-cyan-400">
+                        <GithubIcon className="h-3.5 w-3.5" />
+                        GitHub
+                      </a>
+                      <a href="https://saraav.in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-medium text-zinc-700 shadow-sm transition-colors hover:border-cyan-200 hover:bg-cyan-50 hover:text-cyan-700 dark:border-zinc-800 dark:bg-zinc-950/50 dark:text-zinc-300 dark:hover:border-cyan-900/50 dark:hover:bg-cyan-950/30 dark:hover:text-cyan-400">
+                        <ArrowUpRight className="h-3.5 w-3.5" />
+                        Website
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <div className="mt-6 flex flex-wrap gap-1.5 border-t border-zinc-100 pt-6 dark:border-zinc-900/80">
@@ -294,10 +304,10 @@ export default function PortfolioPage() {
               <Card className="group flex h-full flex-col justify-between p-8 md:p-10">
                 <div className="space-y-5">
                   <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-100 pb-4 dark:border-zinc-900/80">
-                    <Badge variant="outline">Patented System</Badge>
-                    <span className="text-xs font-semibold text-indigo-600 dark:text-indigo-300">
-                      2nd Prize Avishkar
+                    <span className="text-[11px] font-mono uppercase tracking-wider text-indigo-500 dark:text-indigo-400">
+                      Patented System
                     </span>
+                    <Badge variant="outline" className="text-indigo-600 dark:border-indigo-500/30 dark:text-indigo-300">2nd Prize Avishkar</Badge>
                   </div>
                   <div className="space-y-2">
                     <h4 className="text-xl font-bold tracking-tight leading-[1.1] text-zinc-950 transition-colors group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-300 md:text-2xl">
@@ -310,6 +320,12 @@ export default function PortfolioPage() {
                       Designed an AI-enabled UAV system for real-time flood monitoring.
                       Secured 2nd Prize at SGBAU University Level Avishkar Competition.
                     </p>
+                    <div className="flex flex-wrap items-center gap-3 pt-3">
+                      <a href="https://drive.google.com/file/d/1Cjz4lhJ7I8XXd_FkwSzNKlvWH71dsIOE/view" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-medium text-zinc-700 shadow-sm transition-colors hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700 dark:border-zinc-800 dark:bg-zinc-950/50 dark:text-zinc-300 dark:hover:border-indigo-900/50 dark:hover:bg-indigo-950/30 dark:hover:text-indigo-400">
+                        <ArrowUpRight className="h-3.5 w-3.5" />
+                        Project Website
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <div className="mt-6 flex flex-wrap gap-1.5 border-t border-zinc-100 pt-6 dark:border-zinc-900/80">
@@ -326,27 +342,39 @@ export default function PortfolioPage() {
             </BentoGridItem>
 
             <BentoGridItem index={2} className="md:col-span-3 lg:col-span-4">
-              <Card className="flex flex-col justify-between gap-8 p-8 md:flex-row md:items-center md:p-10">
-                <div className="max-w-3xl space-y-2">
-                  <div className="flex items-center gap-2 text-[11px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
-                    <span>GeoSpatial AI Challenge</span>
-                    <span>/</span>
-                    <span className="text-zinc-700 dark:text-zinc-300">ISRO Dataset</span>
+              <Card className="group flex h-full flex-col justify-between p-8 md:p-10">
+                <div className="space-y-5">
+                  <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-100 pb-4 dark:border-zinc-900/80">
+                    <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                      GeoSpatial AI Challenge
+                    </span>
+                    <Badge variant="outline">ISRO Dataset</Badge>
                   </div>
-                  <h4 className="text-lg font-bold tracking-tight leading-[1.1] text-zinc-950 dark:text-white md:text-xl">
-                    Solar Panels Detection
-                  </h4>
-                  <p className="text-sm font-normal leading-relaxed text-zinc-600 dark:text-zinc-400">
-                    Developed high-precision models to detect solar parks from ISRO&apos;s
-                    LISS4 sensor images for advanced environmental and asset mapping
-                    pipelines.
-                  </p>
+                  <div className="space-y-2">
+                    <h4 className="text-xl font-bold tracking-tight leading-[1.1] text-zinc-950 transition-colors group-hover:text-zinc-600 dark:text-white dark:group-hover:text-zinc-300 md:text-2xl">
+                      Solar Panels Detection
+                    </h4>
+                    <p className="pt-1 text-sm font-normal leading-relaxed text-zinc-600 dark:text-zinc-400">
+                      Developed high-precision models to detect solar parks from ISRO&apos;s
+                      LISS4 sensor images for advanced environmental and asset mapping
+                      pipelines.
+                    </p>
+                    <div className="flex flex-wrap items-center gap-3 pt-3">
+                      <a href="https://github.com/Saurabhkg03/Solarnet" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-medium text-zinc-700 shadow-sm transition-colors hover:border-zinc-300 hover:bg-zinc-50 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-950/50 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:bg-zinc-900 dark:hover:text-white">
+                        <GithubIcon className="h-3.5 w-3.5" />
+                        GitHub
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex shrink-0 flex-wrap gap-1.5 md:justify-end">
+                <div className="mt-6 flex flex-wrap gap-1.5 border-t border-zinc-100 pt-6 dark:border-zinc-900/80">
                   {["TensorFlow", "Python", "CNNs", "U-Net", "QGIS"].map((t) => (
-                    <Badge key={t} variant="default">
+                    <span
+                      key={t}
+                      className="rounded border border-zinc-200 bg-zinc-50 px-2 py-0.5 font-mono text-[10px] text-zinc-500 dark:border-zinc-900 dark:bg-zinc-950 dark:text-zinc-400"
+                    >
                       {t}
-                    </Badge>
+                    </span>
                   ))}
                 </div>
               </Card>
