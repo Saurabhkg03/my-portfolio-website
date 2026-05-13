@@ -1,0 +1,216 @@
+"use client"
+
+import * as React from "react"
+import { AnimatePresence, motion } from "framer-motion"
+import { ArrowUpRight, FileText, Mail } from "lucide-react"
+import { ThemeToggle } from "@/components/ThemeToggle"
+
+function GithubIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="1em"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="2"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+      <path d="M9 18c-4.51 2-5-2-7-2" />
+    </svg>
+  )
+}
+
+function LinkedinIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="1em"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="2"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect x="2" y="9" width="4" height="12" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  )
+}
+
+export function ScrollHeader() {
+  const [scrolled, setScrolled] = React.useState(false)
+
+  React.useEffect(() => {
+    const handler = () => setScrolled(window.scrollY > 72)
+
+    handler()
+    window.addEventListener("scroll", handler, { passive: true })
+    return () => window.removeEventListener("scroll", handler)
+  }, [])
+
+  return (
+    <header className="sticky top-0 z-50 h-20 w-full md:h-24">
+      <AnimatePresence mode="wait" initial={false}>
+        {!scrolled ? (
+          <motion.div
+            key="expanded"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
+            className="relative h-full w-full overflow-hidden border-b border-zinc-200/90 bg-white/90 shadow-[0_1px_0_rgba(255,255,255,0.9)_inset,0_18px_50px_rgba(15,23,42,0.06)] backdrop-blur-2xl dark:border-zinc-800/80 dark:bg-[#0b0b0e]/90 dark:shadow-[0_1px_0_rgba(255,255,255,0.04)_inset,0_18px_70px_rgba(255,255,255,0.035)]"
+          >
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-gradient-to-b from-transparent via-white/35 to-white/70 blur-xl dark:via-white/[0.035] dark:to-white/[0.055]" />
+            <div className="pointer-events-none absolute inset-x-20 bottom-0 hidden h-px bg-gradient-to-r from-transparent via-zinc-300/80 to-transparent dark:via-white/20 md:block" />
+            <div className="mx-auto grid h-full max-w-7xl grid-cols-[1fr_auto] items-center gap-4 px-6 md:grid-cols-[1fr_auto_1fr]">
+              <a href="#about" className="min-w-0 text-left opacity-100 hover:opacity-100">
+                <h1 className="flex items-start text-xl font-bold leading-none tracking-tight text-zinc-950 dark:text-white md:text-2xl">
+                  <span>Saurabh Gaikwad</span>
+                </h1>
+                
+              </a>
+
+              <nav className="hidden items-center gap-8 text-sm font-medium text-zinc-500 dark:text-zinc-400 md:flex">
+                <a href="#about" className="hover:text-zinc-950 dark:hover:text-white">
+                  About
+                </a>
+                <a href="#projects" className="hover:text-zinc-950 dark:hover:text-white">
+                  Projects
+                </a>
+                <a href="#experience" className="hover:text-zinc-950 dark:hover:text-white">
+                  Experience
+                </a>
+                
+              </nav>
+
+              <div className="flex items-center justify-end gap-2 sm:gap-3">
+                <a
+                  href="/saurabh-gaikwad-resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden h-9 items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 text-sm font-medium text-zinc-700 shadow-sm transition-colors hover:bg-zinc-100 hover:opacity-100 dark:border-zinc-800 dark:bg-zinc-950/40 dark:text-zinc-200 dark:hover:bg-zinc-900 lg:inline-flex"
+                >
+                  Resume
+                  <FileText className="h-3.5 w-3.5" />
+                </a>
+                <a
+                  href="#contact"
+                  className="hidden h-9 items-center gap-2 rounded-full border border-zinc-200 bg-zinc-950 px-4 text-sm font-medium text-white shadow-sm transition-colors hover:bg-zinc-800 hover:opacity-100 dark:border-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 sm:inline-flex"
+                >
+                  Contact
+                  <ArrowUpRight className="h-3.5 w-3.5" />
+                </a>
+                <div className="hidden items-center gap-1 text-zinc-500 dark:text-zinc-400 lg:flex">
+                  <a
+                    href="https://github.com/Saurabhkg03"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                    className="grid h-9 w-9 place-items-center rounded-full border border-zinc-200 bg-white transition-colors hover:border-zinc-300 hover:text-zinc-950 hover:opacity-100 dark:border-zinc-800 dark:bg-zinc-950/40 dark:hover:border-zinc-700 dark:hover:text-white"
+                  >
+                    <GithubIcon className="h-4 w-4" />
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/saurabh-gaikwad-605a70228"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    className="grid h-9 w-9 place-items-center rounded-full border border-zinc-200 bg-white transition-colors hover:border-zinc-300 hover:text-zinc-950 hover:opacity-100 dark:border-zinc-800 dark:bg-zinc-950/40 dark:hover:border-zinc-700 dark:hover:text-white"
+                  >
+                    <LinkedinIcon className="h-4 w-4" />
+                  </a>
+                </div>
+                <ThemeToggle />
+              </div>
+            </div>
+          </motion.div>
+        ) : (
+          <motion.div
+            key="collapsed"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
+            className="relative flex h-full w-full items-center px-3"
+          >
+            <div className="pointer-events-none absolute inset-x-12 bottom-1 mx-auto h-10 max-w-4xl rounded-full bg-white/70 blur-2xl dark:bg-white/[0.08]" />
+            <div className="mx-auto flex h-14 w-full max-w-5xl items-center justify-between gap-4 rounded-full border border-zinc-200/90 bg-white/92 px-4 shadow-[0_16px_50px_rgba(15,23,42,0.12),0_1px_0_rgba(255,255,255,0.9)_inset] backdrop-blur-2xl dark:border-zinc-700/80 dark:bg-[#101014]/92 dark:shadow-[0_16px_60px_rgba(0,0,0,0.35),0_1px_0_rgba(255,255,255,0.08)_inset] sm:px-5">
+              <a
+                href="#about"
+                className="whitespace-nowrap text-base font-bold tracking-tight text-zinc-950 hover:opacity-100 dark:text-white"
+              >
+                Saurabh Gaikwad
+                <span className="ml-0.5 align-super text-[9px] font-semibold text-zinc-400">R</span>
+              </a>
+              <nav className="hidden items-center gap-5 text-xs font-medium text-zinc-500 dark:text-zinc-400 sm:flex">
+                <a href="#about" className="transition-colors hover:text-zinc-950 dark:hover:text-white">
+                  About
+                </a>
+                <a href="#projects" className="transition-colors hover:text-zinc-950 dark:hover:text-white">
+                  Projects
+                </a>
+                <a href="#experience" className="transition-colors hover:text-zinc-950 dark:hover:text-white">
+                  Experience
+                </a>
+                <a
+                  href="/saurabh-gaikwad-resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-zinc-950 dark:hover:text-white"
+                >
+                  Resume
+                </a>
+                <a
+                  href="https://github.com/Saurabhkg03"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="transition-colors hover:text-zinc-950 dark:hover:text-white"
+                >
+                  <GithubIcon className="h-3.5 w-3.5" />
+                </a>
+                <a
+                  href="https://linkedin.com/in/saurabh-gaikwad-605a70228"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="transition-colors hover:text-zinc-950 dark:hover:text-white"
+                >
+                  <LinkedinIcon className="h-3.5 w-3.5" />
+                </a>
+              </nav>
+              <div className="flex items-center gap-2">
+                <a
+                  href="/saurabh-gaikwad-resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Resume"
+                  className="grid h-9 w-9 place-items-center rounded-full border border-zinc-200 bg-zinc-50 text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-950 hover:opacity-100 dark:border-zinc-800 dark:bg-zinc-950/40 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-white sm:hidden"
+                >
+                  <FileText className="h-4 w-4" />
+                </a>
+                <a
+                  href="#contact"
+                  aria-label="Email"
+                  className="grid h-9 w-9 place-items-center rounded-full border border-zinc-200 bg-zinc-50 text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-950 hover:opacity-100 dark:border-zinc-800 dark:bg-zinc-950/40 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-white sm:hidden"
+                >
+                  <Mail className="h-4 w-4" />
+                </a>
+                <ThemeToggle />
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  )
+}
