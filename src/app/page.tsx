@@ -98,7 +98,7 @@ export default function PortfolioPage() {
     <div className="min-h-screen text-zinc-900 dark:text-zinc-100 antialiased">
       <ScrollHeader />
 
-      <main className="mx-auto max-w-7xl space-y-28 px-6 pt-12 pb-16 md:pt-20 md:pb-14">
+      <main className="mx-auto max-w-7xl space-y-28 px-6 pt-12 pb-16 md:pt-24 md:pb-14">
         {/* HERO */}
         <section
           id="about"
