@@ -74,9 +74,9 @@ export function ScrollHeader() {
             <div className="pointer-events-none absolute inset-x-20 bottom-0 hidden h-px bg-gradient-to-r from-transparent via-zinc-300/80 to-transparent dark:via-white/20 md:block" />
             <div className="mx-auto grid h-full max-w-7xl grid-cols-[1fr_auto] items-center gap-4 px-6 md:grid-cols-[1fr_auto_1fr]">
               <a href="#about" className="min-w-0 text-left opacity-100 hover:opacity-100">
-                <h1 className="flex items-start text-xl font-bold leading-none tracking-tight text-zinc-950 dark:text-white md:text-2xl">
+                <div className="flex items-start text-xl font-bold leading-none tracking-tight text-zinc-950 dark:text-white md:text-2xl">
                   <span>Saurabh Gaikwad</span>
-                </h1>
+                </div>
                 
               </a>
 
@@ -115,7 +115,7 @@ export function ScrollHeader() {
                     href="https://github.com/Saurabhkg03"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="GitHub"
+                    aria-label="GitHub Profile"
                     className="grid h-9 w-9 place-items-center rounded-full border border-zinc-200 bg-white transition-colors hover:border-zinc-300 hover:text-zinc-950 hover:opacity-100 dark:border-zinc-800 dark:bg-zinc-950/40 dark:hover:border-zinc-700 dark:hover:text-white"
                   >
                     <GithubIcon className="h-4 w-4" />
@@ -124,7 +124,7 @@ export function ScrollHeader() {
                     href="https://linkedin.com/in/saurabh-gaikwad-605a70228"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="LinkedIn"
+                    aria-label="LinkedIn Profile"
                     className="grid h-9 w-9 place-items-center rounded-full border border-zinc-200 bg-white transition-colors hover:border-zinc-300 hover:text-zinc-950 hover:opacity-100 dark:border-zinc-800 dark:bg-zinc-950/40 dark:hover:border-zinc-700 dark:hover:text-white"
                   >
                     <LinkedinIcon className="h-4 w-4" />
@@ -181,7 +181,7 @@ export function ScrollHeader() {
                   href="https://github.com/Saurabhkg03"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="GitHub"
+                  aria-label="GitHub Profile"
                   className="transition-colors hover:text-zinc-950 dark:hover:text-white"
                 >
                   <GithubIcon className="h-3.5 w-3.5" />
@@ -190,7 +190,7 @@ export function ScrollHeader() {
                   href="https://linkedin.com/in/saurabh-gaikwad-605a70228"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn"
+                  aria-label="LinkedIn Profile"
                   className="transition-colors hover:text-zinc-950 dark:hover:text-white"
                 >
                   <LinkedinIcon className="h-3.5 w-3.5" />
@@ -201,14 +201,14 @@ export function ScrollHeader() {
                   href="/saurabh-gaikwad-resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Resume"
+                  aria-label="View Resume PDF"
                   className="grid h-9 w-9 place-items-center rounded-full border border-zinc-200 bg-zinc-50 text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-950 hover:opacity-100 dark:border-zinc-800 dark:bg-zinc-950/40 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-white sm:hidden"
                 >
                   <FileText className="h-4 w-4" />
                 </a>
                 <a
                   href="#contact"
-                  aria-label="Email"
+                  aria-label="Open Contact Section"
                   className="grid h-9 w-9 place-items-center rounded-full border border-zinc-200 bg-zinc-50 text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-950 hover:opacity-100 dark:border-zinc-800 dark:bg-zinc-950/40 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-white sm:hidden"
                 >
                   <Mail className="h-4 w-4" />
@@ -267,10 +267,10 @@ export function ScrollHeader() {
               </div>
               <div className="my-2 h-px w-full bg-zinc-200 dark:bg-zinc-800" />
               <div className="flex gap-6 px-2">
-                <a href="https://github.com/Saurabhkg03" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-white">
+                <a aria-label="GitHub Profile" href="https://github.com/Saurabhkg03" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-white">
                   <GithubIcon className="h-5 w-5" />
                 </a>
-                <a href="https://linkedin.com/in/saurabh-gaikwad-605a70228" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-white">
+                <a aria-label="LinkedIn Profile" href="https://linkedin.com/in/saurabh-gaikwad-605a70228" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-white">
                   <LinkedinIcon className="h-5 w-5" />
                 </a>
               </div>
