@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { ArrowUpRight, FileText, Mail } from "lucide-react"
+import { ArrowUpRight, FileText, Mail, Menu, X } from "lucide-react"
 import { ThemeToggle } from "@/components/ThemeToggle"
 
 function GithubIcon({ className }: { className?: string }) {
@@ -48,6 +48,7 @@ function LinkedinIcon({ className }: { className?: string }) {
 
 export function ScrollHeader() {
   const [scrolled, setScrolled] = React.useState(false)
+  const [menuOpen, setMenuOpen] = React.useState(false)
 
   React.useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 72)
@@ -67,7 +68,7 @@ export function ScrollHeader() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.18, ease: "easeOut" }}
-            className="relative h-full w-full overflow-hidden border-b border-zinc-200/90 bg-white/90 shadow-[0_1px_0_rgba(255,255,255,0.9)_inset,0_18px_50px_rgba(15,23,42,0.06)] backdrop-blur-2xl dark:border-zinc-800/80 dark:bg-[#0b0b0e]/90 dark:shadow-[0_1px_0_rgba(255,255,255,0.04)_inset,0_18px_70px_rgba(255,255,255,0.035)]"
+            className="relative h-full w-full overflow-hidden border-b border-zinc-200/60 bg-white/70 shadow-[0_1px_0_rgba(255,255,255,0.6)_inset,0_18px_50px_rgba(15,23,42,0.06)] backdrop-blur-xl dark:border-zinc-800/60 dark:bg-[#0b0b0e]/60 dark:shadow-[0_1px_0_rgba(255,255,255,0.04)_inset,0_18px_70px_rgba(255,255,255,0.035)]"
           >
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-gradient-to-b from-transparent via-white/35 to-white/70 blur-xl dark:via-white/[0.035] dark:to-white/[0.055]" />
             <div className="pointer-events-none absolute inset-x-20 bottom-0 hidden h-px bg-gradient-to-r from-transparent via-zinc-300/80 to-transparent dark:via-white/20 md:block" />
@@ -130,6 +131,13 @@ export function ScrollHeader() {
                   </a>
                 </div>
                 <ThemeToggle />
+                <button
+                  type="button"
+                  onClick={() => setMenuOpen(!menuOpen)}
+                  className="grid h-9 w-9 place-items-center rounded-full border border-zinc-200 bg-white text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-950/40 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-white md:hidden"
+                >
+                  {menuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+                </button>
               </div>
             </div>
           </motion.div>
@@ -143,13 +151,13 @@ export function ScrollHeader() {
             className="relative flex h-full w-full items-center px-3"
           >
             <div className="pointer-events-none absolute inset-x-12 bottom-1 mx-auto h-10 max-w-4xl rounded-full bg-white/70 blur-2xl dark:bg-white/[0.08]" />
-            <div className="mx-auto flex h-14 w-full max-w-5xl items-center justify-between gap-4 rounded-full border border-zinc-200/90 bg-white/92 px-4 shadow-[0_16px_50px_rgba(15,23,42,0.12),0_1px_0_rgba(255,255,255,0.9)_inset] backdrop-blur-2xl dark:border-zinc-700/80 dark:bg-[#101014]/92 dark:shadow-[0_16px_60px_rgba(0,0,0,0.35),0_1px_0_rgba(255,255,255,0.08)_inset] sm:px-5">
+            <div className="mx-auto flex h-14 w-full max-w-5xl items-center justify-between gap-4 rounded-full border border-zinc-200/50 bg-white/60 px-4 shadow-[0_8px_30px_rgba(0,0,0,0.04),0_1px_0_rgba(255,255,255,0.8)_inset] backdrop-blur-xl dark:border-white/10 dark:bg-black/40 dark:shadow-[0_8px_30px_rgba(0,0,0,0.2),0_1px_0_rgba(255,255,255,0.1)_inset] sm:px-5">
               <a
                 href="#about"
                 className="whitespace-nowrap text-base font-bold tracking-tight text-zinc-950 hover:opacity-100 dark:text-white"
               >
                 Saurabh Gaikwad
-                <span className="ml-0.5 align-super text-[9px] font-semibold text-zinc-400">R</span>
+
               </a>
               <nav className="hidden items-center gap-5 text-xs font-medium text-zinc-500 dark:text-zinc-400 sm:flex">
                 <a href="#about" className="transition-colors hover:text-zinc-950 dark:hover:text-white">
@@ -206,8 +214,67 @@ export function ScrollHeader() {
                   <Mail className="h-4 w-4" />
                 </a>
                 <ThemeToggle />
+                <button
+                  type="button"
+                  onClick={() => setMenuOpen(!menuOpen)}
+                  className="grid h-9 w-9 place-items-center rounded-full border border-zinc-200 bg-zinc-50 text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-950/40 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-white md:hidden"
+                >
+                  {menuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+                </button>
               </div>
             </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="absolute inset-x-0 top-full mt-2 mx-4 rounded-2xl border border-zinc-200 bg-white/95 p-5 shadow-xl backdrop-blur-xl dark:border-zinc-800 dark:bg-zinc-950/95 dark:shadow-[0_10px_40px_rgba(0,0,0,0.5)] md:hidden"
+          >
+            <nav className="flex flex-col gap-4 text-sm font-medium text-zinc-600 dark:text-zinc-300">
+              <a href="#about" onClick={() => setMenuOpen(false)} className="px-2 py-1.5 hover:text-zinc-950 dark:hover:text-white">
+                About
+              </a>
+              <a href="#projects" onClick={() => setMenuOpen(false)} className="px-2 py-1.5 hover:text-zinc-950 dark:hover:text-white">
+                Projects
+              </a>
+              <a href="#experience" onClick={() => setMenuOpen(false)} className="px-2 py-1.5 hover:text-zinc-950 dark:hover:text-white">
+                Experience
+              </a>
+              <div className="flex w-full items-center gap-3 pb-2 pt-1">
+                <a
+                  href="/saurabh-gaikwad-resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMenuOpen(false)}
+                  className="flex flex-1 items-center justify-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 py-2 text-sm font-medium text-zinc-700 shadow-sm transition-colors hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-950/40 dark:text-zinc-200 dark:hover:bg-zinc-900"
+                >
+                  Resume
+                  <FileText className="h-3.5 w-3.5" />
+                </a>
+                <a
+                  href="#contact"
+                  onClick={() => setMenuOpen(false)}
+                  className="flex flex-1 items-center justify-center gap-2 rounded-full border border-zinc-200 bg-zinc-950 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-zinc-800 dark:border-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
+                >
+                  Contact
+                  <ArrowUpRight className="h-3.5 w-3.5" />
+                </a>
+              </div>
+              <div className="my-2 h-px w-full bg-zinc-200 dark:bg-zinc-800" />
+              <div className="flex gap-6 px-2">
+                <a href="https://github.com/Saurabhkg03" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-white">
+                  <GithubIcon className="h-5 w-5" />
+                </a>
+                <a href="https://linkedin.com/in/saurabh-gaikwad-605a70228" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-white">
+                  <LinkedinIcon className="h-5 w-5" />
+                </a>
+              </div>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>
