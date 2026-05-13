@@ -98,7 +98,7 @@ export default function PortfolioPage() {
     <div className="min-h-screen text-zinc-900 dark:text-zinc-100 antialiased">
       <ScrollHeader />
 
-      <main className="mx-auto max-w-7xl space-y-28 px-6 pt-12 pb-16 md:pt-20 md:pb-14">
+      <main className="mx-auto max-w-7xl space-y-28 px-6 pt-12 pb-16 md:pt-24 md:pb-14">
         {/* HERO */}
         <section
           id="about"
@@ -387,12 +387,13 @@ export default function PortfolioPage() {
               Career History & Roles
             </span>
           </div>
-          <div className="divide-y divide-zinc-300 border-t border-zinc-400 dark:border-zinc-700 dark:divide-zinc-700/80">
+          <div className="divide-y divide-zinc-300 dark:divide-zinc-700/80">
             {[
               {
                 period: "Mar 2025",
                 type: "Internship",
                 company: "Apexa iQ",
+                link: "https://www.apexaiq.com/",
                 role: "DevOps & Automation Intern",
                 roleColor: "text-cyan-600 dark:text-cyan-400",
                 desc: "Optimized operational workflows, developed Python automation scripts using Pytest and Selenium, and containerized applications using Docker.",
@@ -402,9 +403,10 @@ export default function PortfolioPage() {
                 period: "Apr 2023 - Feb 2024",
                 type: "Internship",
                 company: "OneSmarter Inc.",
+                link: "https://www.onesmarter.com/",
                 role: "AI & ML Intern",
                 roleColor: "text-indigo-600 dark:text-indigo-400",
-                desc: "Led a cross-functional team of 4 to deliver AI-driven solutions. Utilized NLP techniques and LLMs for data analysis and custom chatbots.",
+                desc: "Built custom chatbots trained on proprietary databases and designed ML-based Amazon reviews scraping pipelines. Engineered a Google Chrome extension powered by OpenAI's ChatGPT API, integrating generative models like Stable Diffusion and Dall-E.",
                 extra: (
                   <span
                     key="tag"
@@ -418,6 +420,7 @@ export default function PortfolioPage() {
                 period: "Aug 2023 - Sep 2025",
                 type: "Leadership",
                 company: "Google Developer Student Clubs",
+                link: null,
                 role: "AI/ML Lead",
                 roleColor: "text-zinc-600 dark:text-zinc-300",
                 desc: "Delivered workshops for 60+ students. Represented team at Google Solution Challenge at T-Hub.",
@@ -439,7 +442,19 @@ export default function PortfolioPage() {
                 <div className="max-w-3xl flex-1 space-y-1.5">
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
                     <h3 className="text-sm font-semibold tracking-tight text-zinc-950 dark:text-white md:text-base">
-                      {exp.company}
+                      {exp.link ? (
+                        <a
+                          href={exp.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 hover:text-cyan-600 hover:underline underline-offset-4 transition-colors dark:hover:text-cyan-400"
+                        >
+                          {exp.company}
+                          <ArrowUpRight className="h-3 w-3" />
+                        </a>
+                      ) : (
+                        exp.company
+                      )}
                     </h3>
                     <div className="flex items-center gap-2">
                       {exp.extra}
