@@ -4,7 +4,6 @@ import * as React from "react"
 import { motion } from "framer-motion"
 import {
   ArrowUpRight,
-  Download,
   FileText,
   Mail,
   MapPin,
@@ -82,7 +81,7 @@ function HeroPhoto() {
       <div className="relative overflow-hidden rounded-[1.75rem] border border-zinc-200/90 bg-white/75 p-2 shadow-[0_24px_80px_rgba(15,23,42,0.12)] backdrop-blur dark:border-zinc-600 dark:bg-zinc-900/80 dark:shadow-[0_24px_90px_rgba(0,0,0,0.28)]">
         <div
           role="img"
-          aria-label="Saurabh Gaikwad"
+          aria-label="Portrait of Saurabh Gaikwad for the portfolio hero section"
           className="aspect-[1/1] rounded-[1.35rem] bg-zinc-100 bg-cover bg-center dark:bg-zinc-900"
           style={{
             backgroundImage:
@@ -120,10 +119,10 @@ export default function PortfolioPage() {
                 </span>
               </div>
 
-              <h2 className="max-w-3xl pt-2 text-3xl font-bold tracking-tighter leading-[1.1] text-zinc-950 dark:text-white sm:text-4xl md:text-5xl">
+              <h1 className="max-w-3xl pt-2 text-3xl font-bold tracking-tighter leading-[1.1] text-zinc-950 dark:text-white sm:text-4xl md:text-5xl">
                 Bridging the gap between advanced machine learning models and intuitive
                 user interfaces.
-              </h2>
+              </h1>
 
               
             </div>
@@ -179,9 +178,9 @@ export default function PortfolioPage() {
         {/* TECH STACK */}
         <section className="space-y-6">
           <div className="flex items-center justify-between border-b border-zinc-400 pb-3 dark:border-zinc-700">
-            <h3 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
+            <h2 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
               02 / Technical Stack
-            </h3>
+            </h2>
             <span className="text-xs font-medium uppercase tracking-tight text-zinc-500 dark:text-zinc-400">
               Languages & Systems
             </span>
@@ -244,9 +243,9 @@ export default function PortfolioPage() {
         {/* PROJECTS */}
         <section id="projects" className="space-y-6">
           <div className="flex items-center justify-between border-b border-zinc-400 pb-3 dark:border-zinc-700">
-            <h3 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
+            <h2 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
               03 / Featured Work
-            </h3>
+            </h2>
             <span className="text-xs font-medium uppercase tracking-tight text-zinc-500 dark:text-zinc-400">
                 Projects
             </span>
@@ -262,9 +261,9 @@ export default function PortfolioPage() {
                     <Badge variant="neon">Scaled: 500+ Users</Badge>
                   </div>
                   <div className="space-y-2">
-                    <h4 className="text-xl font-bold tracking-tight leading-[1.1] text-zinc-950 transition-colors group-hover:text-cyan-600 dark:text-white dark:group-hover:text-cyan-300 md:text-2xl">
+                    <h3 className="text-xl font-bold tracking-tight leading-[1.1] text-zinc-950 transition-colors group-hover:text-cyan-600 dark:text-white dark:group-hover:text-cyan-300 md:text-2xl">
                       Saraav
-                    </h4>
+                    </h3>
                     <p className="text-[11px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
                       Creator & Lead Developer
                     </p>
@@ -310,9 +309,9 @@ export default function PortfolioPage() {
                     <Badge variant="outline" className="text-indigo-600 dark:border-indigo-500/30 dark:text-indigo-300">2nd Prize Avishkar</Badge>
                   </div>
                   <div className="space-y-2">
-                    <h4 className="text-xl font-bold tracking-tight leading-[1.1] text-zinc-950 transition-colors group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-300 md:text-2xl">
+                    <h3 className="text-xl font-bold tracking-tight leading-[1.1] text-zinc-950 transition-colors group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-300 md:text-2xl">
                       UAV Flood Mapping System
-                    </h4>
+                    </h3>
                     <p className="text-[11px] font-mono text-zinc-500 dark:text-zinc-400">
                       Patent: No. 202523064402 A
                     </p>
@@ -351,9 +350,9 @@ export default function PortfolioPage() {
                     <Badge variant="outline">ISRO Dataset</Badge>
                   </div>
                   <div className="space-y-2">
-                    <h4 className="text-xl font-bold tracking-tight leading-[1.1] text-zinc-950 transition-colors group-hover:text-zinc-600 dark:text-white dark:group-hover:text-zinc-300 md:text-2xl">
+                    <h3 className="text-xl font-bold tracking-tight leading-[1.1] text-zinc-950 transition-colors group-hover:text-zinc-600 dark:text-white dark:group-hover:text-zinc-300 md:text-2xl">
                       Solar Panels Detection
-                    </h4>
+                    </h3>
                     <p className="pt-1 text-sm font-normal leading-relaxed text-zinc-600 dark:text-zinc-400">
                       Developed high-precision models to detect solar parks from ISRO&apos;s
                       LISS4 sensor images for advanced environmental and asset mapping
@@ -385,9 +384,9 @@ export default function PortfolioPage() {
         {/* EXPERIENCE */}
         <section id="experience" className="space-y-6">
           <div className="flex items-center justify-between border-b border-zinc-400 pb-3 dark:border-zinc-700">
-            <h3 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
+            <h2 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
               04 / Experience
-            </h3>
+            </h2>
             <span className="text-xs font-medium uppercase tracking-tight text-zinc-500 dark:text-zinc-400">
               Career History & Roles
             </span>
@@ -431,9 +430,6 @@ export default function PortfolioPage() {
             ].map((exp, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
                 className="group flex flex-col justify-between gap-4 rounded-lg px-3 py-6 transition-colors hover:bg-zinc-50 md:flex-row md:items-start md:py-8 dark:hover:bg-[#101013]"
               >
                 <div className="w-52 shrink-0">
@@ -446,9 +442,9 @@ export default function PortfolioPage() {
                 </div>
                 <div className="max-w-3xl flex-1 space-y-1.5">
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
-                    <h4 className="text-sm font-semibold tracking-tight text-zinc-950 dark:text-white md:text-base">
+                    <h3 className="text-sm font-semibold tracking-tight text-zinc-950 dark:text-white md:text-base">
                       {exp.company}
-                    </h4>
+                    </h3>
                     <div className="flex items-center gap-2">
                       {exp.extra}
                       <span className={`text-sm font-medium ${exp.roleColor}`}>{exp.role}</span>
@@ -466,9 +462,9 @@ export default function PortfolioPage() {
         {/* EDUCATION */}
         <section className="space-y-6">
           <div className="flex items-center justify-between border-b border-zinc-400 pb-3 dark:border-zinc-700">
-            <h3 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
+            <h2 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
               05 / Education
-            </h3>
+            </h2>
             <span className="text-xs font-medium uppercase text-zinc-500 dark:text-zinc-400">
               Academic Foundations
             </span>
@@ -478,9 +474,9 @@ export default function PortfolioPage() {
               <span className="block text-[11px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
                 Undergraduate Degree
               </span>
-              <h4 className="text-base font-semibold tracking-tight leading-[1.1] text-zinc-950 dark:text-white md:text-lg">
+              <h3 className="text-base font-semibold tracking-tight leading-[1.1] text-zinc-950 dark:text-white md:text-lg">
                 Shri Sant Gajanan Maharaj College of Engineering, Shegaon
-              </h4>
+              </h3>
               <p className="pt-0.5 text-sm font-normal leading-relaxed text-zinc-500 dark:text-zinc-400">
                 Bachelor of Engineering, Electronics and Telecommunication
               </p>
@@ -546,7 +542,7 @@ export default function PortfolioPage() {
                     href="https://github.com/Saurabhkg03"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="GitHub"
+                    aria-label="GitHub Profile"
                     className="grid h-11 w-11 place-items-center rounded-full bg-violet-100 text-violet-950 transition-all duration-200 hover:bg-violet-200 hover:scale-110 hover:rotate-6 hover:opacity-100"
                   >
                     <GithubIcon className="h-4 w-4" />
@@ -555,7 +551,7 @@ export default function PortfolioPage() {
                     href="https://linkedin.com/in/saurabh-gaikwad-605a70228"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="LinkedIn"
+                    aria-label="LinkedIn Profile"
                     className="grid h-11 w-11 place-items-center rounded-full bg-sky-100 text-sky-950 transition-all duration-200 hover:bg-sky-200 hover:scale-110 hover:-rotate-6 hover:opacity-100"
                   >
                     <LinkedinIcon className="h-4 w-4" />
@@ -564,14 +560,14 @@ export default function PortfolioPage() {
                     href="https://x.com/saurabh_exe"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="X"
+                    aria-label="X Profile"
                     className="grid h-11 w-11 place-items-center rounded-full bg-zinc-100 text-zinc-950 transition-all duration-200 hover:bg-zinc-200 hover:scale-110 hover:rotate-6 hover:opacity-100"
                   >
                     <XIcon className="h-4 w-4" />
                   </a>
                   <a
                     href="mailto:saurabhkg36@gmail.com"
-                    aria-label="Email"
+                    aria-label="Email Saurabh Gaikwad"
                     className="grid h-11 w-11 place-items-center rounded-full bg-rose-100 text-rose-950 transition-all duration-200 hover:bg-rose-200 hover:scale-110 hover:-rotate-6 hover:opacity-100"
                   >
                     <Mail className="h-4 w-4" />
