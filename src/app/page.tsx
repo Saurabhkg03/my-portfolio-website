@@ -1,6 +1,8 @@
 "use client"
 
 import * as React from "react"
+import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import {
   ArrowUpRight,
@@ -11,7 +13,6 @@ import {
 import { BentoGrid, BentoGridItem } from "@/components/BentoGrid"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ScrollHeader } from "@/components/ScrollHeader"
 
 function GithubIcon({ className }: { className?: string }) {
   return (
@@ -96,9 +97,7 @@ function HeroPhoto() {
 export default function PortfolioPage() {
   return (
     <div className="min-h-screen text-zinc-900 dark:text-zinc-100 antialiased">
-      <ScrollHeader />
-
-      <main className="mx-auto max-w-7xl space-y-28 px-6 pt-12 pb-16 md:pt-24 md:pb-14">
+      <main className="mx-auto max-w-7xl space-y-16 px-6 pt-12 pb-16 md:pt-16 md:pb-14">
         {/* HERO */}
         <section
           id="about"
@@ -107,10 +106,10 @@ export default function PortfolioPage() {
           <div className="max-w-4xl space-y-8">
             <div className="space-y-4">
               <div className="flex flex-wrap items-center gap-3">
-                <span className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
-                  01 / Core Objective
+                <span className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-xs uppercase tracking-wider text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
+                  01 / Introduction
                 </span>
-                <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.24em] text-emerald-700 dark:border-emerald-900/50 dark:bg-emerald-950/30 dark:text-emerald-300">
+                <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium uppercase tracking-[0.24em] text-emerald-700 dark:border-emerald-900/50 dark:bg-emerald-950/30 dark:text-emerald-300">
                   <span className="relative flex h-2.5 w-2.5">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                     <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500 shadow-[0_0_16px_rgba(34,197,94,0.85)]" />
@@ -120,7 +119,7 @@ export default function PortfolioPage() {
               </div>
 
               <h1 className="max-w-3xl pt-2 text-3xl font-bold tracking-tighter leading-[1.1] text-zinc-950 dark:text-white sm:text-4xl md:text-5xl">
-                Building intuitive interfaces for powerful AI systems
+                    Engineering robust Python backends and deploying machine learning models into production.
               </h1>
 
               
@@ -142,9 +141,9 @@ export default function PortfolioPage() {
             </div>
 
             <div className="space-y-5 border-l-2 border-zinc-200 pl-6 pt-4 dark:border-zinc-800">
-              <p className="text-sm font-normal leading-relaxed text-zinc-600 dark:text-zinc-400 md:text-base">
+              <p className="text-base font-normal leading-relaxed text-zinc-600 dark:text-zinc-300 md:text-lg">
                 I am a{" "}
-                <strong className="font-semibold text-zinc-900 dark:text-zinc-200">
+                <strong className="font-semibold text-zinc-900 dark:text-white">
                   Full-Stack AI Engineer
                 </strong>{" "}
                 specializing in building scalable software solutions and intelligent
@@ -163,7 +162,7 @@ export default function PortfolioPage() {
                 </strong>{" "}
                 at the University Level Avishkar Competition.
               </p>
-              <p className="text-sm font-normal leading-relaxed text-zinc-500">
+              <p className="text-base font-normal leading-relaxed text-zinc-500 dark:text-zinc-400">
                 I thrive in developing end-to-end products that merge advanced AI with seamless user experiences.
               </p>
             </div>
@@ -173,21 +172,21 @@ export default function PortfolioPage() {
 
         {/* TECH STACK */}
         <section className="space-y-6">
-          <div className="flex items-center justify-between border-b border-zinc-400 pb-3 dark:border-zinc-700">
-            <h2 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
+          <div className="flex items-center justify-between border-b border-zinc-950 pb-3 dark:border-zinc-200">
+            <h2 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-xs uppercase tracking-wider text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-white">
               02 / Technical Stack
             </h2>
-            <span className="text-xs font-medium uppercase tracking-tight text-zinc-500 dark:text-zinc-400">
+            <span className="text-xs md:text-sm font-medium uppercase tracking-tight text-zinc-500 dark:text-zinc-400">
               Languages & Systems
             </span>
           </div>
-          <div className="grid grid-cols-1 gap-px overflow-hidden border border-zinc-400 bg-zinc-400 md:grid-cols-4 dark:border-zinc-700 dark:bg-zinc-700">
-            <div className="space-y-4 bg-white p-6 md:p-8 dark:bg-[#0a0a0c]">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
-                Languages
+          <div className="grid grid-cols-1 gap-px overflow-hidden border border-zinc-400 bg-zinc-400 md:grid-cols-6 dark:border-zinc-700 dark:bg-zinc-700">
+            <div className="space-y-4 bg-white p-6 md:col-span-2 md:p-8 dark:bg-[#0a0a0c]">
+              <span className="text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                Programming Languages
               </span>
               <div className="flex flex-wrap gap-1.5 pt-2">
-                {["Python", "C", "C++", "TypeScript", "JavaScript", "SQL"].map((t) => (
+                {["Python", "C", "C++", "HTML", "CSS"].map((t) => (
                   <Badge key={t} variant="default">
                     {t}
                   </Badge>
@@ -195,18 +194,17 @@ export default function PortfolioPage() {
               </div>
             </div>
             <div className="space-y-4 bg-white p-6 md:col-span-2 md:p-8 dark:bg-[#0a0a0c]">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-indigo-500 dark:text-indigo-400">
-                AI / Machine Learning
+              <span className="text-xs font-mono uppercase tracking-wider text-indigo-500 dark:text-indigo-400">
+                Frameworks & Libraries
               </span>
               <div className="flex flex-wrap gap-1.5 pt-2">
                 {[
-                  "Deep Learning",
-                  "Generative AI",
-                  "LLMs",
-                  "Computer Vision",
-                  "TensorFlow",
-                  "Hugging Face",
-                  "NLP",
+                  "Pandas",
+                  "NumPy",
+                  "Scikit-learn",
+                  "Tensorflow",
+                  "REST APIs",
+                  "FastAPI"
                 ].map((t) => (
                   <Badge key={t} variant="outline">
                     {t}
@@ -214,18 +212,43 @@ export default function PortfolioPage() {
                 ))}
               </div>
             </div>
-            <div className="space-y-4 bg-white p-6 md:p-8 dark:bg-[#0a0a0c]">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-cyan-500 dark:text-cyan-400">
-                Web & DevOps
+            <div className="space-y-4 bg-white p-6 md:col-span-2 md:p-8 dark:bg-[#0a0a0c]">
+              <span className="text-xs font-mono uppercase tracking-wider text-cyan-500 dark:text-cyan-400">
+                DevOps & Cloud
               </span>
               <div className="flex flex-wrap gap-1.5 pt-2">
                 {[
-                  "React.js",
-                  "FastAPI",
-                  "Tailwind CSS",
                   "Docker",
-                  "GitHub Actions",
-                  "Firebase",
+                  "Kubernetes",
+                  "GitHub Actions"
+                ].map((t) => (
+                  <Badge key={t} variant="secondary">
+                    {t}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+            <div className="space-y-4 bg-white p-6 md:col-span-3 md:p-8 dark:bg-[#0a0a0c]">
+              <span className="text-xs font-mono uppercase tracking-wider text-emerald-500 dark:text-emerald-400">
+                Software/Tools
+              </span>
+              <div className="flex flex-wrap gap-1.5 pt-2">
+                {[
+                  "Git", "GitHub", "Postman", "QGIS", "Jupyter Notebooks", "Figma"
+                ].map((t) => (
+                  <Badge key={t} variant="outline">
+                    {t}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+            <div className="space-y-4 bg-white p-6 md:col-span-3 md:p-8 dark:bg-[#0a0a0c]">
+              <span className="text-xs font-mono uppercase tracking-wider text-rose-500 dark:text-rose-400">
+                Core CS
+              </span>
+              <div className="flex flex-wrap gap-1.5 pt-2">
+                {[
+                  "Data Structures and Algorithms", "Object Oriented Programming", "Data Modeling", "Data Analytics"
                 ].map((t) => (
                   <Badge key={t} variant="secondary">
                     {t}
@@ -236,154 +259,12 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        {/* PROJECTS */}
-        <section id="projects" className="space-y-6">
-          <div className="flex items-center justify-between border-b border-zinc-400 pb-3 dark:border-zinc-700">
-            <h2 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
-              03 / Featured Work
-            </h2>
-            <span className="text-xs font-medium uppercase tracking-tight text-zinc-500 dark:text-zinc-400">
-                Projects
-            </span>
-          </div>
-          <BentoGrid>
-            <BentoGridItem index={0} className="md:col-span-2 lg:col-span-2">
-              <Card className="group flex h-full flex-col justify-between p-8 md:p-10">
-                <div className="space-y-5">
-                  <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-100 pb-4 dark:border-zinc-900/80">
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-cyan-500 dark:text-cyan-400">
-                      EdTech Platform
-                    </span>
-                    <Badge variant="neon">Scaled: 500+ Users</Badge>
-                  </div>
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-bold tracking-tight leading-[1.1] text-zinc-950 transition-colors group-hover:text-cyan-600 dark:text-white dark:group-hover:text-cyan-300 md:text-2xl">
-                      Saraav
-                    </h3>
-                    <p className="text-[11px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
-                      Creator & Lead Developer
-                    </p>
-                    <p className="pt-1 text-sm font-normal leading-relaxed text-zinc-600 dark:text-zinc-400">
-                      Launched a full-stack platform scaling to 500+ users. Implemented
-                      AI-driven content generation using Python scripts to automate study
-                      material creation. Managed the entire SDLC.
-                    </p>
-                    <div className="flex flex-wrap items-center gap-3 pt-3">
-                      <a href="https://github.com/Saurabhkg03/saraav" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-medium text-zinc-700 shadow-sm transition-colors hover:border-cyan-200 hover:bg-cyan-50 hover:text-cyan-700 dark:border-zinc-800 dark:bg-zinc-950/50 dark:text-zinc-300 dark:hover:border-cyan-900/50 dark:hover:bg-cyan-950/30 dark:hover:text-cyan-400">
-                        <GithubIcon className="h-3.5 w-3.5" />
-                        GitHub
-                      </a>
-                      <a href="https://saraav.in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-medium text-zinc-700 shadow-sm transition-colors hover:border-cyan-200 hover:bg-cyan-50 hover:text-cyan-700 dark:border-zinc-800 dark:bg-zinc-950/50 dark:text-zinc-300 dark:hover:border-cyan-900/50 dark:hover:bg-cyan-950/30 dark:hover:text-cyan-400">
-                        <ArrowUpRight className="h-3.5 w-3.5" />
-                        Website
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-6 flex flex-wrap gap-1.5 border-t border-zinc-100 pt-6 dark:border-zinc-900/80">
-                  {["React.js", "TypeScript", "Firebase", "Tailwind CSS", "Python"].map(
-                    (t) => (
-                      <span
-                        key={t}
-                        className="rounded border border-zinc-200 bg-zinc-50 px-2 py-0.5 font-mono text-[10px] text-zinc-500 dark:border-zinc-900 dark:bg-zinc-950 dark:text-zinc-400"
-                      >
-                        {t}
-                      </span>
-                    )
-                  )}
-                </div>
-              </Card>
-            </BentoGridItem>
-
-            <BentoGridItem index={1} className="md:col-span-1 lg:col-span-2">
-              <Card className="group flex h-full flex-col justify-between p-8 md:p-10">
-                <div className="space-y-5">
-                  <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-100 pb-4 dark:border-zinc-900/80">
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-indigo-500 dark:text-indigo-400">
-                      Patented System
-                    </span>
-                    <Badge variant="outline" className="text-indigo-600 dark:border-indigo-500/30 dark:text-indigo-300">2nd Prize Avishkar</Badge>
-                  </div>
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-bold tracking-tight leading-[1.1] text-zinc-950 transition-colors group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-300 md:text-2xl">
-                      UAV Flood Mapping System
-                    </h3>
-                    <p className="text-[11px] font-mono text-zinc-500 dark:text-zinc-400">
-                      Patent: No. 202523064402 A
-                    </p>
-                    <p className="pt-1 text-sm font-normal leading-relaxed text-zinc-600 dark:text-zinc-400">
-                      Designed an AI-enabled UAV system for real-time flood monitoring.
-                      Secured 2nd Prize at SGBAU University Level Avishkar Competition.
-                    </p>
-                    <div className="flex flex-wrap items-center gap-3 pt-3">
-                      <a href="https://drive.google.com/file/d/1Cjz4lhJ7I8XXd_FkwSzNKlvWH71dsIOE/view" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-medium text-zinc-700 shadow-sm transition-colors hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700 dark:border-zinc-800 dark:bg-zinc-950/50 dark:text-zinc-300 dark:hover:border-indigo-900/50 dark:hover:bg-indigo-950/30 dark:hover:text-indigo-400">
-                        <ArrowUpRight className="h-3.5 w-3.5" />
-                        Project Website
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-6 flex flex-wrap gap-1.5 border-t border-zinc-100 pt-6 dark:border-zinc-900/80">
-                  {["CNNs", "LSTMs", "ArcGIS"].map((t) => (
-                    <span
-                      key={t}
-                      className="rounded border border-indigo-200 bg-indigo-50 px-2 py-0.5 font-mono text-[10px] text-indigo-500 dark:border-indigo-900/40 dark:bg-indigo-950/20 dark:text-indigo-400"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </Card>
-            </BentoGridItem>
-
-            <BentoGridItem index={2} className="md:col-span-3 lg:col-span-4">
-              <Card className="group flex h-full flex-col justify-between p-8 md:p-10">
-                <div className="space-y-5">
-                  <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-100 pb-4 dark:border-zinc-900/80">
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
-                      GeoSpatial AI Challenge
-                    </span>
-                    <Badge variant="outline">ISRO Dataset</Badge>
-                  </div>
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-bold tracking-tight leading-[1.1] text-zinc-950 transition-colors group-hover:text-zinc-600 dark:text-white dark:group-hover:text-zinc-300 md:text-2xl">
-                      Solar Panels Detection
-                    </h3>
-                    <p className="pt-1 text-sm font-normal leading-relaxed text-zinc-600 dark:text-zinc-400">
-                      Developed high-precision models to detect solar parks from ISRO&apos;s
-                      LISS4 sensor images for advanced environmental and asset mapping
-                      pipelines.
-                    </p>
-                    <div className="flex flex-wrap items-center gap-3 pt-3">
-                      <a href="https://github.com/Saurabhkg03/Solarnet" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-medium text-zinc-700 shadow-sm transition-colors hover:border-zinc-300 hover:bg-zinc-50 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-950/50 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:bg-zinc-900 dark:hover:text-white">
-                        <GithubIcon className="h-3.5 w-3.5" />
-                        GitHub
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-6 flex flex-wrap gap-1.5 border-t border-zinc-100 pt-6 dark:border-zinc-900/80">
-                  {["TensorFlow", "Python", "CNNs", "U-Net", "QGIS"].map((t) => (
-                    <span
-                      key={t}
-                      className="rounded border border-zinc-200 bg-zinc-50 px-2 py-0.5 font-mono text-[10px] text-zinc-500 dark:border-zinc-900 dark:bg-zinc-950 dark:text-zinc-400"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </Card>
-            </BentoGridItem>
-          </BentoGrid>
-        </section>
-
         {/* EXPERIENCE */}
-        <section id="experience" className="space-y-6">
-          <div className="flex items-center justify-between border-b border-zinc-400 pb-3 dark:border-zinc-700">
-            <h2 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
-              04 / Experience
+        <section id="experience" className="space-y-6">          <div className="flex items-center justify-between border-b border-zinc-950 pb-3 dark:border-zinc-200">
+            <h2 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-xs uppercase tracking-wider text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-white">
+              03 / Experience
             </h2>
-            <span className="text-xs font-medium uppercase tracking-tight text-zinc-500 dark:text-zinc-400">
+            <span className="text-xs md:text-sm font-medium uppercase tracking-tight text-zinc-500 dark:text-zinc-400">
               Career History & Roles
             </span>
           </div>
@@ -432,16 +313,16 @@ export default function PortfolioPage() {
                 className="group flex flex-col justify-between gap-4 rounded-lg px-3 py-6 transition-colors hover:bg-zinc-50 md:flex-row md:items-start md:py-8 dark:hover:bg-[#101013]"
               >
                 <div className="w-52 shrink-0">
-                  <span className="block text-xs font-mono uppercase text-zinc-500 dark:text-zinc-400">
+                  <span className="block text-sm font-mono uppercase text-zinc-500 dark:text-zinc-400">
                     {exp.period}
                   </span>
-                  <span className="mt-1 block text-[11px] font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                  <span className="mt-1 block text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
                     {exp.type}
                   </span>
                 </div>
                 <div className="max-w-3xl flex-1 space-y-1.5">
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
-                    <h3 className="text-sm font-semibold tracking-tight text-zinc-950 dark:text-white md:text-base">
+                    <h3 className="text-base font-semibold tracking-tight text-zinc-950 dark:text-white md:text-lg">
                       {exp.link ? (
                         <a
                           href={exp.link}
@@ -450,7 +331,7 @@ export default function PortfolioPage() {
                           className="inline-flex items-center gap-1 hover:text-cyan-600 hover:underline underline-offset-4 transition-colors dark:hover:text-cyan-400"
                         >
                           {exp.company}
-                          <ArrowUpRight className="h-3 w-3" />
+                          <ArrowUpRight className="h-3.5 w-3.5" />
                         </a>
                       ) : (
                         exp.company
@@ -458,10 +339,10 @@ export default function PortfolioPage() {
                     </h3>
                     <div className="flex items-center gap-2">
                       {exp.extra}
-                      <span className={`text-sm font-medium ${exp.roleColor}`}>{exp.role}</span>
+                      <span className={`text-sm md:text-base font-medium ${exp.roleColor}`}>{exp.role}</span>
                     </div>
                   </div>
-                  <p className="text-sm font-normal leading-relaxed text-zinc-500 dark:text-zinc-400">
+                  <p className="text-base font-normal leading-relaxed text-zinc-500 dark:text-zinc-400">
                     {exp.desc}
                   </p>
                 </div>
@@ -470,33 +351,284 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        {/* EDUCATION */}
+        {/* PROJECTS */}
+        <section id="projects" className="space-y-6">
+          <div className="flex items-center justify-between border-b border-zinc-950 pb-3 dark:border-zinc-200">
+            <h2 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-xs uppercase tracking-wider text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-white">
+              04 / Featured Work
+            </h2>
+            <span className="text-xs md:text-sm font-medium uppercase tracking-tight text-zinc-500 dark:text-zinc-400">
+                Projects
+            </span>
+          </div>
+          <BentoGrid>
+            {/* NeuroFusion-BCI (Full Width Split Layout) */}
+            <BentoGridItem index={0} className="md:col-span-3 lg:col-span-4">
+              <Card className="group flex h-full flex-col justify-between p-8 md:p-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full">
+                  <div className="flex flex-col justify-between h-full space-y-5 order-last lg:order-first">
+                    <div className="space-y-5">
+                      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-100 pb-4 dark:border-zinc-900/80">
+                        <span className="text-sm font-mono uppercase tracking-wider text-cyan-600 dark:text-cyan-400">
+                          Brain-Computer Interface
+                        </span>
+                        <Badge variant="neon" className="px-3 py-1 text-xs">Accuracy: 96.88%</Badge>
+                      </div>
+                      <div className="space-y-2">
+                        <h3 className="text-2xl font-bold tracking-tight leading-[1.1] text-zinc-950 transition-colors group-hover:text-cyan-600 dark:text-white dark:group-hover:text-cyan-300">
+                          NeuroFusion-BCI
+                        </h3>
+                        <p className="text-sm font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                          Lead AI Engineer
+                        </p>
+                        <p className="pt-1 text-base font-normal leading-relaxed text-zinc-600 dark:text-zinc-400">
+                          Developed an advanced Brain-Computer Interface (BCI) decoding system for 4-class motor imagery. Proposed a novel Hybrid Feature Fusion methodology and engineered a sequential BiGRU + 1D CNN deep learning architecture to achieve robust spatial and temporal EEG pattern recognition.
+                        </p>
+                        <div className="flex flex-wrap items-center gap-3 pt-4">
+                          <a href="https://github.com/Saurabhkg03/NeuroFusion-BCI" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2.5 text-sm md:text-base font-semibold text-zinc-700 shadow-sm transition-colors hover:border-cyan-200 hover:bg-cyan-50 hover:text-cyan-700 dark:border-zinc-800 dark:bg-zinc-950/50 dark:text-zinc-300 dark:hover:border-cyan-900/50 dark:hover:bg-cyan-950/30 dark:hover:text-cyan-400">
+                            <GithubIcon className="h-4.5 w-4.5" />
+                            GitHub
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-6 flex flex-wrap gap-2 border-t border-zinc-100 pt-6 dark:border-zinc-900/80">
+                      {["Python", "TensorFlow", "Signal Processing", "Hjorth Parameters", "BiGRU", "CNNs"].map((t) => (
+                        <span
+                          key={t}
+                          className="rounded border border-zinc-200 bg-zinc-50 dark:bg-zinc-950/50 px-3 py-1 font-mono text-sm text-zinc-700 dark:text-zinc-300 dark:border-zinc-800"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="relative w-full aspect-video overflow-hidden rounded-lg border border-zinc-200/50 dark:border-zinc-800/50 shadow-sm bg-zinc-50 dark:bg-zinc-950 order-first lg:order-last">
+                    <Image
+                      src="/neurofusion.png"
+                      alt="NeuroFusion-BCI System"
+                      fill
+                      sizes="(max-w-1024px) 100vw, 50vw"
+                      className="object-contain object-center"
+                    />
+                  </div>
+                </div>
+              </Card>
+            </BentoGridItem>
+
+            {/* Saraav (Half Width Card) */}
+            <BentoGridItem index={1} className="md:col-span-2 lg:col-span-2">
+              <Card className="group flex h-full flex-col justify-between p-8 md:p-10">
+                <div className="space-y-5">
+                  <div className="relative w-full aspect-video overflow-hidden rounded-lg border border-zinc-200/50 dark:border-zinc-800/50 shadow-sm bg-zinc-50 dark:bg-zinc-950">
+                    <Image
+                      src="/saraav.png"
+                      alt="Saraav EdTech Platform"
+                      fill
+                      sizes="(max-w-768px) 100vw, 50vw"
+                      className="object-contain object-center"
+                      priority
+                    />
+                  </div>
+                  <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-100 pb-4 dark:border-zinc-900/80">
+                    <span className="text-sm font-mono uppercase tracking-wider text-cyan-600 dark:text-cyan-400">
+                      EdTech Platform
+                    </span>
+                    <Badge variant="neon" className="px-3 py-1 text-xs">Scaled: 500+ Users</Badge>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-2xl font-bold tracking-tight leading-[1.1] text-zinc-950 transition-colors group-hover:text-cyan-600 dark:text-white dark:group-hover:text-cyan-300">
+                      Saraav
+                    </h3>
+                    <p className="text-sm font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                      Creator & Lead Developer
+                    </p>
+                    <p className="pt-1 text-base font-normal leading-relaxed text-zinc-600 dark:text-zinc-400">
+                      Launched a full-stack platform scaling to 500+ users. Implemented
+                      AI-driven content generation using Python scripts to automate study
+                      material creation. Managed the entire SDLC.
+                    </p>
+                    <div className="flex flex-wrap items-center gap-3 pt-4">
+                      <a href="https://github.com/Saurabhkg03/saraav" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2.5 text-sm md:text-base font-semibold text-zinc-700 shadow-sm transition-colors hover:border-cyan-200 hover:bg-cyan-50 hover:text-cyan-700 dark:border-zinc-800 dark:bg-zinc-950/50 dark:text-zinc-300 dark:hover:border-cyan-900/50 dark:hover:bg-cyan-950/30 dark:hover:text-cyan-400">
+                        <GithubIcon className="h-4.5 w-4.5" />
+                        GitHub
+                      </a>
+                      <a href="https://saraav.in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2.5 text-sm md:text-base font-semibold text-zinc-700 shadow-sm transition-colors hover:border-cyan-200 hover:bg-cyan-50 hover:text-cyan-700 dark:border-zinc-800 dark:bg-zinc-950/50 dark:text-zinc-300 dark:hover:border-cyan-900/50 dark:hover:bg-cyan-950/30 dark:hover:text-cyan-400">
+                        <ArrowUpRight className="h-4.5 w-4.5" />
+                        Website
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-6 flex flex-wrap gap-2 border-t border-zinc-100 pt-6 dark:border-zinc-900/80">
+                  {["React.js", "TypeScript", "Firebase", "Tailwind CSS", "Python"].map(
+                    (t) => (
+                      <span
+                        key={t}
+                        className="rounded border border-zinc-200 bg-zinc-50 dark:bg-zinc-950/50 px-3 py-1 font-mono text-sm text-zinc-700 dark:text-zinc-300 dark:border-zinc-800"
+                      >
+                        {t}
+                      </span>
+                    )
+                  )}
+                </div>
+              </Card>
+            </BentoGridItem>
+
+            <BentoGridItem index={2} className="md:col-span-1 lg:col-span-2">
+              <Card className="group flex h-full flex-col justify-between p-8 md:p-10">
+                <div className="space-y-5">
+                  <div className="relative w-full aspect-video overflow-hidden rounded-lg border border-zinc-200/50 dark:border-zinc-800/50 shadow-sm bg-zinc-50 dark:bg-zinc-950">
+                    <Image
+                      src="/flood.jpg"
+                      alt="UAV Flood Mapping System"
+                      fill
+                      sizes="(max-w-768px) 100vw, 50vw"
+                      className="object-contain object-center"
+                    />
+                  </div>
+                  <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-100 pb-4 dark:border-zinc-900/80">
+                    <span className="text-sm font-mono uppercase tracking-wider text-indigo-500 dark:text-indigo-400">
+                      Patented System
+                    </span>
+                    <Badge variant="outline" className="text-indigo-600 border-indigo-200 dark:border-indigo-500/30 dark:text-indigo-300 px-3 py-1 text-xs">2nd Prize Avishkar</Badge>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-2xl font-bold tracking-tight leading-[1.1] text-zinc-950 transition-colors group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-300">
+                      UAV Flood Mapping System
+                    </h3>
+                    <p className="text-sm font-mono text-zinc-500 dark:text-zinc-400">
+                      Patent: No. 202523064402 A
+                    </p>
+                    <p className="pt-1 text-base font-normal leading-relaxed text-zinc-600 dark:text-zinc-400">
+                      Designed an AI-enabled UAV system for real-time flood monitoring.
+                      Secured 2nd Prize at SGBAU University Level Avishkar Competition.
+                    </p>
+                    <div className="flex flex-wrap items-center gap-3 pt-4">
+                      <a href="https://drive.google.com/file/d/1Cjz4lhJ7I8XXd_FkwSzNKlvWH71dsIOE/view" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2.5 text-sm md:text-base font-semibold text-zinc-700 shadow-sm transition-colors hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700 dark:border-zinc-800 dark:bg-zinc-950/50 dark:text-zinc-300 dark:hover:border-indigo-900/50 dark:hover:bg-indigo-950/30 dark:hover:text-indigo-400">
+                        <ArrowUpRight className="h-4.5 w-4.5" />
+                        Patent Application
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-6 flex flex-wrap gap-2 border-t border-zinc-100 pt-6 dark:border-zinc-900/80">
+                  {["CNNs", "LSTMs", "ArcGIS"].map((t) => (
+                    <span
+                      key={t}
+                      className="rounded border border-indigo-200 bg-indigo-50 dark:bg-indigo-950/50 px-3 py-1 font-mono text-sm text-indigo-700 dark:text-indigo-300 dark:border-indigo-900/40"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </Card>
+            </BentoGridItem>
+
+            <BentoGridItem index={3} className="md:col-span-3 lg:col-span-4">
+              <Card className="group flex h-full flex-col justify-between p-8 md:p-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full">
+                  <div className="flex flex-col justify-between h-full space-y-5 order-last lg:order-first">
+                    <div className="space-y-5">
+                      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-100 pb-4 dark:border-zinc-900/80">
+                        <span className="text-sm font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                          GeoSpatial AI Challenge
+                        </span>
+                        <Badge variant="outline" className="px-3 py-1 text-xs">ISRO Dataset</Badge>
+                      </div>
+                      <div className="space-y-2">
+                        <h3 className="text-2xl font-bold tracking-tight leading-[1.1] text-zinc-950 transition-colors group-hover:text-zinc-600 dark:text-white dark:group-hover:text-zinc-300">
+                          Solar Panels Detection
+                        </h3>
+                        <p className="pt-1 text-base font-normal leading-relaxed text-zinc-600 dark:text-zinc-400">
+                          Developed high-precision models to detect solar parks from ISRO&apos;s
+                          LISS4 sensor images for advanced environmental and asset mapping
+                          pipelines.
+                        </p>
+                        <div className="flex flex-wrap items-center gap-3 pt-4">
+                          <a href="https://github.com/Saurabhkg03/Solarnet" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2.5 text-sm md:text-base font-semibold text-zinc-700 shadow-sm transition-colors hover:border-zinc-300 hover:bg-zinc-50 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-950/50 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:bg-zinc-900 dark:hover:text-white">
+                            <GithubIcon className="h-4.5 w-4.5" />
+                            GitHub
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-6 flex flex-wrap gap-2 border-t border-zinc-100 pt-6 dark:border-zinc-900/80">
+                      {["TensorFlow", "Python", "CNNs", "U-Net", "QGIS"].map((t) => (
+                        <span
+                          key={t}
+                          className="rounded border border-zinc-200 bg-zinc-50 dark:bg-zinc-950/50 px-3 py-1 font-mono text-sm text-zinc-700 dark:text-zinc-300 dark:border-zinc-800"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="relative w-full aspect-video overflow-hidden rounded-lg border border-zinc-200/50 dark:border-zinc-800/50 shadow-sm bg-zinc-50 dark:bg-zinc-950 order-first lg:order-last">
+                    <Image
+                      src="/solar.png"
+                      alt="Solar Panels Detection"
+                      fill
+                      sizes="(max-w-1024px) 100vw, 50vw"
+                      className="object-contain object-center"
+                    />
+                  </div>
+                </div>
+              </Card>
+            </BentoGridItem>
+          </BentoGrid>
+          <div className="flex justify-center pt-8">
+            <Link 
+              href="/projects" 
+              className="group inline-flex items-center justify-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-6 py-2.5 text-sm font-semibold text-zinc-950 dark:text-white shadow-sm transition-all duration-300 hover:border-zinc-300 dark:hover:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-900/60"
+            >
+              More Projects
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-200"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        </section>
+
+
         <section className="space-y-6">
-          <div className="flex items-center justify-between border-b border-zinc-400 pb-3 dark:border-zinc-700">
-            <h2 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
+          <div className="flex items-center justify-between border-b border-zinc-950 pb-3 dark:border-zinc-200">
+            <h2 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-xs uppercase tracking-wider text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-white">
               05 / Education
             </h2>
-            <span className="text-xs font-medium uppercase text-zinc-500 dark:text-zinc-400">
+            <span className="text-xs md:text-sm font-medium uppercase text-zinc-500 dark:text-zinc-400">
               Academic Foundations
             </span>
           </div>
           <div className="flex flex-col justify-between gap-6 rounded-xl border border-zinc-200 bg-white p-8 md:flex-row md:items-center dark:border-zinc-800/80 dark:bg-zinc-900/30">
-            <div className="space-y-1">
-              <span className="block text-[11px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+            <div className="space-y-1.5">
+              <span className="block text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
                 Undergraduate Degree
               </span>
-              <h3 className="text-base font-semibold tracking-tight leading-[1.1] text-zinc-950 dark:text-white md:text-lg">
+              <h3 className="text-lg font-semibold tracking-tight leading-[1.1] text-zinc-950 dark:text-white md:text-xl">
                 Shri Sant Gajanan Maharaj College of Engineering, Shegaon
               </h3>
-              <p className="pt-0.5 text-sm font-normal leading-relaxed text-zinc-500 dark:text-zinc-400">
+              <p className="pt-0.5 text-base font-normal leading-relaxed text-zinc-500 dark:text-zinc-400">
                 Bachelor of Engineering, Electronics and Telecommunication
               </p>
             </div>
             <div className="shrink-0 border-t border-zinc-200 pt-4 md:border-l md:border-t-0 md:pl-8 md:pt-0 md:text-right dark:border-zinc-800">
-              <span className="block text-[11px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+              <span className="block text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
                 Expected Graduation
               </span>
-              <span className="block pt-0.5 text-sm font-bold text-emerald-600 dark:text-emerald-400">
+              <span className="block pt-0.5 text-base font-bold text-emerald-600 dark:text-emerald-400">
                 May 2026
               </span>
             </div>
@@ -504,7 +636,7 @@ export default function PortfolioPage() {
         </section>
       </main>
 
-      <footer id="contact" className="mt-24 border-t border-zinc-400 bg-zinc-950 text-zinc-100 dark:border-zinc-800">
+      <footer id="contact" className="mt-16 border-t border-zinc-400 bg-zinc-950 text-zinc-100 dark:border-zinc-800">
         <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
           <div className="grid gap-14 lg:grid-cols-[minmax(0,1.45fr)_minmax(320px,1fr)] lg:gap-20">
             <div className="space-y-6">
