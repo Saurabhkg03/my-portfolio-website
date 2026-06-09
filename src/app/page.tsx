@@ -119,7 +119,7 @@ export default function PortfolioPage() {
               </div>
 
               <h1 className="max-w-3xl pt-2 text-3xl font-bold tracking-tighter leading-[1.1] text-zinc-950 dark:text-white sm:text-4xl md:text-5xl">
-                    Engineering robust Python backends and deploying machine learning models into production.
+                    Building Scalable and Accurate AI Solutions
               </h1>
 
               
