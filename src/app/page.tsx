@@ -101,7 +101,7 @@ export default function PortfolioPage() {
         {/* HERO */}
         <section
           id="about"
-          className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_360px] xl:grid-cols-[minmax(0,1fr)_420px]"
+          className="scroll-mt-20 md:scroll-mt-28 grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_360px] xl:grid-cols-[minmax(0,1fr)_420px]"
         >
           <div className="max-w-4xl space-y-8">
             <div className="space-y-4">
@@ -260,7 +260,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* EXPERIENCE */}
-        <section id="experience" className="space-y-6">          <div className="flex items-center justify-between border-b border-zinc-950 pb-3 dark:border-zinc-200">
+        <section id="experience" className="scroll-mt-20 md:scroll-mt-28 space-y-6">          <div className="flex items-center justify-between border-b border-zinc-950 pb-3 dark:border-zinc-200">
             <h2 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-xs uppercase tracking-wider text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-white">
               03 / Experience
             </h2>
@@ -352,7 +352,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* PROJECTS */}
-        <section id="projects" className="space-y-6">
+        <section id="projects" className="scroll-mt-20 md:scroll-mt-28 space-y-6">
           <div className="flex items-center justify-between border-b border-zinc-950 pb-3 dark:border-zinc-200">
             <h2 className="border border-zinc-200 bg-zinc-100 px-2.5 py-1 font-mono text-xs uppercase tracking-wider text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-white">
               04 / Featured Work
@@ -636,7 +636,7 @@ export default function PortfolioPage() {
         </section>
       </main>
 
-      <footer id="contact" className="mt-16 border-t border-zinc-400 bg-zinc-950 text-zinc-100 dark:border-zinc-800">
+      <footer id="contact" className="scroll-mt-20 md:scroll-mt-28 mt-16 border-t border-zinc-400 bg-zinc-950 text-zinc-100 dark:border-zinc-800">
         <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
           <div className="grid gap-14 lg:grid-cols-[minmax(0,1.45fr)_minmax(320px,1fr)] lg:gap-20">
             <div className="space-y-6">

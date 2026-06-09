@@ -124,12 +124,12 @@ export default function ProjectsPage() {
       <div className="absolute top-0 left-1/4 w-[40rem] h-[40rem] rounded-full bg-cyan-500/5 dark:bg-cyan-400/2 blur-3xl pointer-events-none" />
       <div className="absolute top-1/3 right-1/4 w-[35rem] h-[35rem] rounded-full bg-indigo-500/5 dark:bg-indigo-400/2 blur-3xl pointer-events-none" />
 
-      <main className="mx-auto max-w-6xl px-6 py-12 md:py-24 space-y-16 relative z-10">
+      <main className="mx-auto max-w-6xl px-6 pt-6 pb-12 md:pt-10 md:pb-24 space-y-8 relative z-10">
         
         {/* Navigation & Header */}
         <div className="space-y-6">
           <Link 
-            href="/#projects" 
+            href="/" 
             className="inline-flex items-center gap-2 text-sm font-medium text-zinc-500 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors group"
           >
             <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
@@ -141,10 +141,10 @@ export default function ProjectsPage() {
               <span className="h-px w-8 bg-cyan-500" />
               
             </div>
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-zinc-950 dark:text-white leading-[1.05]">
+            <h1 className="text-3xl font-bold tracking-tighter leading-[1.1] text-zinc-950 dark:text-white sm:text-4xl md:text-5xl">
               All Projects<span className="text-cyan-500">.</span>
             </h1>
-            <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl leading-relaxed">
+            <p className="text-base md:text-lg text-zinc-600 dark:text-zinc-400 max-w-3xl leading-relaxed">
               A comprehensive directory of my engineering projects, AI model deployments, patents, and software explorations.
             </p>
           </div>
@@ -155,11 +155,10 @@ export default function ProjectsPage() {
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          className="space-y-20 md:space-y-32 pt-6"
+          className="space-y-16 md:space-y-24 pt-4 md:pt-8"
         >
           <AnimatePresence mode="popLayout">
             {projects.map((project, idx) => {
-              const isEven = idx % 2 === 0
               return (
                 <motion.div
                   layout
@@ -167,23 +166,9 @@ export default function ProjectsPage() {
                   variants={itemVariants}
                   className="group"
                 >
-                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
-                    {/* Project Image Panel */}
-                    <div className={`lg:col-span-6 w-full ${isEven ? "lg:order-1" : "lg:order-2"}`}>
-                      <div className="relative w-full aspect-video overflow-hidden rounded-2xl border border-zinc-200/60 dark:border-zinc-800/80 shadow-[0_12px_36px_rgba(0,0,0,0.04)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.2)] bg-white dark:bg-[#0c0c0f]">
-                        <Image
-                          src={project.image}
-                          alt={`${project.title} Interface / Architecture`}
-                          fill
-                          sizes="(max-w-1024px) 100vw, 50vw"
-                          className="object-contain object-center"
-                          priority={idx === 0}
-                        />
-                      </div>
-                    </div>
-
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
                     {/* Project Text Panel */}
-                    <div className={`lg:col-span-6 space-y-6 ${isEven ? "lg:order-2" : "lg:order-1"}`}>
+                    <div className="lg:col-span-6 space-y-5">
                       <div className="space-y-4">
                         {/* Top Badges / Metadata */}
                         <div className="flex flex-wrap items-center gap-3">
@@ -204,22 +189,22 @@ export default function ProjectsPage() {
 
                         {/* Title & Role */}
                         <div className="space-y-1">
-                          <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-950 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors duration-200">
+                          <h3 className="text-2xl md:text-3xl font-bold tracking-tighter text-zinc-950 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors duration-200">
                             {project.title}
                           </h3>
-                          <p className="text-sm font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-medium">
+                          <p className="text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-medium">
                             {project.role}
                           </p>
                         </div>
 
                         {/* Core Description */}
-                        <p className="text-base md:text-lg font-normal leading-relaxed text-zinc-650 dark:text-zinc-300">
+                        <p className="text-base font-normal leading-relaxed text-zinc-650 dark:text-zinc-300">
                           {project.description}
                         </p>
                       </div>
 
-                      {/* Extended Key Contributions (Makes layout beautifully spacious and informative) */}
-                      <div className="space-y-3.5 bg-zinc-100/50 dark:bg-zinc-900/30 p-5 rounded-2xl border border-zinc-200/30 dark:border-zinc-800/40">
+                      {/* Extended Key Contributions */}
+                      <div className="space-y-3 bg-zinc-100/50 dark:bg-zinc-900/30 p-5 rounded-2xl border border-zinc-200/30 dark:border-zinc-800/40">
                         <h4 className="text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-bold">
                           Key Accomplishments & Stack Integration
                         </h4>
@@ -234,7 +219,7 @@ export default function ProjectsPage() {
                       </div>
 
                       {/* Technology Stack Tags */}
-                      <div className="flex flex-wrap gap-1.5 pt-1">
+                      <div className="flex flex-wrap gap-1.5 pt-0.5">
                         {project.tags.map((tag) => (
                           <span
                             key={tag}
@@ -246,7 +231,7 @@ export default function ProjectsPage() {
                       </div>
 
                       {/* Link CTAs */}
-                      <div className="flex flex-wrap items-center gap-3 pt-2">
+                      <div className="flex flex-wrap items-center gap-3 pt-1">
                         {project.github && project.github !== "#" && (
                           <a 
                             href={project.github} 
@@ -269,6 +254,20 @@ export default function ProjectsPage() {
                             Live Project
                           </a>
                         )}
+                      </div>
+                    </div>
+
+                    {/* Project Image Panel */}
+                    <div className="lg:col-span-6 w-full">
+                      <div className="relative w-full aspect-video overflow-hidden rounded-2xl border border-zinc-200/60 dark:border-zinc-800/80 shadow-[0_12px_36px_rgba(0,0,0,0.04)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.2)] bg-white dark:bg-[#0c0c0f]">
+                        <Image
+                          src={project.image}
+                          alt={`${project.title} Interface / Architecture`}
+                          fill
+                          sizes="(max-w-1024px) 100vw, 50vw"
+                          className="object-contain object-center"
+                          priority={idx === 0}
+                        />
                       </div>
                     </div>
                   </div>

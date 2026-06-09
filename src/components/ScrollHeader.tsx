@@ -84,7 +84,7 @@ export function ScrollHeader() {
                 <a href="/#about" className="hover:opacity-75 transition-opacity">
                   About
                 </a>
-                <a href="/#projects" className="hover:opacity-75 transition-opacity">
+                <a href="/projects" className="hover:opacity-75 transition-opacity">
                   Projects
                 </a>
                 <a href="/#experience" className="hover:opacity-75 transition-opacity">
@@ -162,7 +162,7 @@ export function ScrollHeader() {
                 <a href="/#about" className="transition-opacity hover:opacity-75">
                   About
                 </a>
-                <a href="/#projects" className="transition-opacity hover:opacity-75">
+                <a href="/projects" className="transition-opacity hover:opacity-75">
                   Projects
                 </a>
                 <a href="/#experience" className="transition-opacity hover:opacity-75">
@@ -238,7 +238,7 @@ export function ScrollHeader() {
               <a href="/#about" onClick={() => setMenuOpen(false)} className="px-2 py-1.5 hover:text-zinc-950 dark:hover:text-white">
                 About
               </a>
-              <a href="/#projects" onClick={() => setMenuOpen(false)} className="px-2 py-1.5 hover:text-zinc-950 dark:hover:text-white">
+              <a href="/projects" onClick={() => setMenuOpen(false)} className="px-2 py-1.5 hover:text-zinc-950 dark:hover:text-white">
                 Projects
               </a>
               <a href="/#experience" onClick={() => setMenuOpen(false)} className="px-2 py-1.5 hover:text-zinc-950 dark:hover:text-white">
