@@ -73,24 +73,23 @@ export function ScrollHeader() {
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-gradient-to-b from-transparent via-white/35 to-white/70 blur-xl dark:via-white/[0.035] dark:to-white/[0.055]" />
             <div className="pointer-events-none absolute inset-x-20 bottom-0 hidden h-px bg-gradient-to-r from-transparent via-zinc-300/80 to-transparent dark:via-white/20 md:block" />
             <div className="mx-auto grid h-full max-w-7xl grid-cols-[1fr_auto] items-center gap-4 px-6 md:grid-cols-[1fr_auto_1fr]">
-              <a href="#about" className="min-w-0 text-left opacity-100 hover:opacity-100">
+              <a href="/#about" className="min-w-0 text-left opacity-100 hover:opacity-100">
                 <div className="flex items-start text-xl font-bold leading-none tracking-tight text-zinc-950 dark:text-white md:text-2xl">
                   <span>Saurabh Gaikwad</span>
                 </div>
                 
               </a>
 
-              <nav className="hidden items-center gap-8 text-sm font-medium text-zinc-500 dark:text-zinc-400 md:flex">
-                <a href="#about" className="hover:text-zinc-950 dark:hover:text-white">
+              <nav className="hidden items-center gap-8 text-sm font-medium text-zinc-950 dark:text-white md:flex">
+                <a href="/#about" className="hover:opacity-75 transition-opacity">
                   About
                 </a>
-                <a href="#projects" className="hover:text-zinc-950 dark:hover:text-white">
+                <a href="/#projects" className="hover:opacity-75 transition-opacity">
                   Projects
                 </a>
-                <a href="#experience" className="hover:text-zinc-950 dark:hover:text-white">
+                <a href="/#experience" className="hover:opacity-75 transition-opacity">
                   Experience
                 </a>
-                
               </nav>
 
               <div className="flex items-center justify-end gap-2 sm:gap-3">
@@ -153,27 +152,27 @@ export function ScrollHeader() {
             <div className="pointer-events-none absolute inset-x-12 bottom-1 mx-auto h-10 max-w-4xl rounded-full bg-white/70 blur-2xl dark:bg-white/[0.08]" />
             <div className="mx-auto flex h-14 w-full max-w-5xl items-center justify-between gap-4 rounded-full border border-zinc-200/50 bg-white/60 px-4 shadow-[0_8px_30px_rgba(0,0,0,0.04),0_1px_0_rgba(255,255,255,0.8)_inset] backdrop-blur-xl dark:border-white/10 dark:bg-black/40 dark:shadow-[0_8px_30px_rgba(0,0,0,0.2),0_1px_0_rgba(255,255,255,0.1)_inset] sm:px-5">
               <a
-                href="#about"
+                href="/#about"
                 className="whitespace-nowrap text-base font-bold tracking-tight text-zinc-950 hover:opacity-100 dark:text-white"
               >
                 Saurabh Gaikwad
 
               </a>
-              <nav className="hidden items-center gap-5 text-xs font-medium text-zinc-500 dark:text-zinc-400 sm:flex">
-                <a href="#about" className="transition-colors hover:text-zinc-950 dark:hover:text-white">
+              <nav className="hidden items-center gap-5 text-sm font-medium text-zinc-950 dark:text-white sm:flex">
+                <a href="/#about" className="transition-opacity hover:opacity-75">
                   About
                 </a>
-                <a href="#projects" className="transition-colors hover:text-zinc-950 dark:hover:text-white">
+                <a href="/#projects" className="transition-opacity hover:opacity-75">
                   Projects
                 </a>
-                <a href="#experience" className="transition-colors hover:text-zinc-950 dark:hover:text-white">
+                <a href="/#experience" className="transition-opacity hover:opacity-75">
                   Experience
                 </a>
                 <a
                   href="/saurabh-gaikwad-resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-colors hover:text-zinc-950 dark:hover:text-white"
+                  className="transition-opacity hover:opacity-75"
                 >
                   Resume
                 </a>
@@ -236,13 +235,13 @@ export function ScrollHeader() {
             className="absolute inset-x-0 top-full mt-2 mx-4 rounded-2xl border border-zinc-200 bg-white/95 p-5 shadow-xl backdrop-blur-xl dark:border-zinc-800 dark:bg-zinc-950/95 dark:shadow-[0_10px_40px_rgba(0,0,0,0.5)] md:hidden"
           >
             <nav className="flex flex-col gap-4 text-sm font-medium text-zinc-600 dark:text-zinc-300">
-              <a href="#about" onClick={() => setMenuOpen(false)} className="px-2 py-1.5 hover:text-zinc-950 dark:hover:text-white">
+              <a href="/#about" onClick={() => setMenuOpen(false)} className="px-2 py-1.5 hover:text-zinc-950 dark:hover:text-white">
                 About
               </a>
-              <a href="#projects" onClick={() => setMenuOpen(false)} className="px-2 py-1.5 hover:text-zinc-950 dark:hover:text-white">
+              <a href="/#projects" onClick={() => setMenuOpen(false)} className="px-2 py-1.5 hover:text-zinc-950 dark:hover:text-white">
                 Projects
               </a>
-              <a href="#experience" onClick={() => setMenuOpen(false)} className="px-2 py-1.5 hover:text-zinc-950 dark:hover:text-white">
+              <a href="/#experience" onClick={() => setMenuOpen(false)} className="px-2 py-1.5 hover:text-zinc-950 dark:hover:text-white">
                 Experience
               </a>
               <div className="flex w-full items-center gap-3 pb-2 pt-1">
