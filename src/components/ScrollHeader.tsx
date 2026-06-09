@@ -80,7 +80,7 @@ export function ScrollHeader() {
                 
               </a>
 
-              <nav className="hidden items-center gap-8 text-sm font-medium text-zinc-950 dark:text-white md:flex">
+              <nav className="hidden items-center gap-8 text-sm font-medium text-zinc-950 dark:text-zinc-300 md:flex">
                 <a href="/#about" className="hover:opacity-75 transition-opacity">
                   About
                 </a>
